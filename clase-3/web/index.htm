@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prbar api rest</title>
+    <script type="module">
+        fetch('http://localhost:3000/movies')
+            .then(response => response.json())
+            .then(data => {
+                const html = data.map(movie => `
+                <article data-id="${movie.id}"> 
+                <h1>${movie.title}</h1>
+                <p>${movie.description}</p>
+                </article>
+                `).join('')
+                document.body.innerHTML = html
+            })
+            .catch(error => console.log(error));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
