@@ -171,7 +171,7 @@
 - Inyección de dependencias  
 - Despliegue a Producción
 
-##clase 6 
+## clase 6 
 ### Chat en tiempo real con socket.io
 
 - Inicio  
